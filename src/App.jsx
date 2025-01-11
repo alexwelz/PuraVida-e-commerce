@@ -1,19 +1,13 @@
-import { Navbar } from "./Navbar";
+import { Navbar } from "./components/layouts/navbar/Navbar";
+import { Footer } from "./components/layouts/footer/Footer";
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 
 function App() {
-  const sumar = () => {
-    console.log("Estoy sumando");
-  };
-
   return (
     <div>
       <Navbar />
-      <main>
-        <h2>Principal</h2>
-      </main>
-
-      <button onClick={sumar}>Sumar</button>
-      <footer>Footer</footer>
+      <ItemListContainer />
+      <Footer />
     </div>
   );
 }

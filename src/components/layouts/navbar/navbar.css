@@ -1,0 +1,21 @@
+.navbar-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.logo {
+  color: black;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item {
+  list-style: none;
+}
