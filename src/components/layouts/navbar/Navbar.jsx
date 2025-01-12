@@ -1,10 +1,11 @@
 import "./navbar.css";
-import { CartWidget } from "../../common/CartWidget";
+import { CartWidget } from "../../common/cartWidget/CartWidget";
+import logo from "../../../assets/logo.png";
 
 export const Navbar = () => {
   return (
     <nav className="navbar-container">
-      <h2 className="logo">Logo</h2>
+      <img className="logo" src={logo} alt="logo" />
       <ul className="link">
         <li className="item">Inicio</li>
         <li className="item">Productos</li>

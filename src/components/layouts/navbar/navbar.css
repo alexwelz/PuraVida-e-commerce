@@ -7,9 +7,11 @@
 }
 
 .logo {
-  color: black;
+  position: sticky;
+  width: 90px;
+  border-radius: 70px;
+  background-color: white;
 }
-
 .link {
   display: flex;
   justify-content: space-between;
