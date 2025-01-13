@@ -2,13 +2,13 @@
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 25px;
   border-bottom: 2px solid #ccc;
 }
 
 .logo {
   position: sticky;
-  width: 90px;
+  width: 65px;
   border-radius: 70px;
   background-color: white;
 }

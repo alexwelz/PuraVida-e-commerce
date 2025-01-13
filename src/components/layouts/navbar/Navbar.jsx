@@ -10,6 +10,7 @@ export const Navbar = () => {
         <li className="item">Inicio</li>
         <li className="item">Productos</li>
         <li className="item">Novedades</li>
+        <li className="item">Contacto</li>
       </ul>
       <CartWidget />
     </nav>
