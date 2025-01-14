@@ -5,12 +5,13 @@
 
 .cart-icon {
   font-size: 24px;
+  margin: 20px 15px 0 0;
 }
 
 .bubble {
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: 5px;
+  right: -1px;
   background-color: rgb(250, 47, 47);
   color: white;
   border-radius: 50%;
