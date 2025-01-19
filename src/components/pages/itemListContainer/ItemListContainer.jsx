@@ -31,26 +31,17 @@ const ItemListContainer = () => {
   return (
     <div>
       <h2>Bienvenido a Pura Vida</h2>
-      <ProductCard
-        title={items[0]?.title}
-        price={items[0]?.price}
-        description={items[0]?.description}
-      />
-      <ProductCard
-        title={items[1]?.title}
-        price={items[1]?.price}
-        description={items[1]?.description}
-      />
-      <ProductCard
-        title={items[2]?.title}
-        price={items[2]?.price}
-        description={items[2]?.description}
-      />
-      <ProductCard
-        title={items[3]?.title}
-        price={items[3]?.price}
-        description={items[3]?.description}
-      />
+      {items.map((element) => {
+        return (
+          <ProductCard
+            key={element.id}
+            image={element.imgURL}
+            title={element.title}
+            price={element.price}
+            description={element.description}
+          />
+        );
+      })}
     </div>
   );
 };
