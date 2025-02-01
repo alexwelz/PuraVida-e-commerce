@@ -39,6 +39,7 @@ const ItemListContainer = () => {
         //     title={element.title}
         //     price={element.price}
         //     description={element.description}
+        //     id={element.id}
         //   />
       })}
     </div>

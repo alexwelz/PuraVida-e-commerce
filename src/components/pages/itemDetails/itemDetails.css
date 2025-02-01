@@ -1,0 +1,31 @@
+.product-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px;
+}
+
+.product-image {
+  width: 35%;
+}
+
+.product-details {
+  max-width: 50%;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+
+.product-description {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 20px;
+  margin-top: 10%;
+}
