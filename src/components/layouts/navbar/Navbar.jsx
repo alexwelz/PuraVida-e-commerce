@@ -11,10 +11,18 @@ export const Navbar = ({ changeMode, isDark }) => {
         <img className="logo" src={logo} alt="logo" />
       </Link>
       <ul className="link">
-        <li className="item">Inicio</li>
-        <li className="item">Productos</li>
-        <li className="item">Novedades</li>
-        <li className="item">Contacto</li>
+        <Link to="/" className="item">
+          Inicio
+        </Link>
+        <Link className="item" to="/category/tablas">
+          Tablas
+        </Link>
+        <Link className="item" to="/category/ejes">
+          Ejes
+        </Link>
+        <Link className="item" to="/category/ruedas">
+          Ruedas
+        </Link>
       </ul>
       <Dark changeMode={changeMode} isDark={isDark} />
       <CartWidget />

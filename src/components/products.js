@@ -8,7 +8,7 @@ export let products = [
     imgURL:
       "https://res.cloudinary.com/dcykysgy9/image/upload/v1737068915/1__41827.1721951166_tnbghq.jpg",
     stock: 2,
-    category: "Tipo de eje",
+    category: "ejes",
   },
   {
     id: "2",
@@ -19,7 +19,7 @@ export let products = [
     imgURL:
       "https://res.cloudinary.com/dcykysgy9/image/upload/v1737068976/1__39384.1722001530_g1svsf.jpg",
     stock: 12,
-    category: "Tamaño de la tabla",
+    category: "tablas",
   },
   {
     id: "3",
@@ -30,7 +30,7 @@ export let products = [
     imgURL:
       "https://res.cloudinary.com/dcykysgy9/image/upload/v1737068998/Carver2024_Omni_C5__51096.1713939364_lh4vy5.jpg",
     stock: 12,
-    category: "Ruedas",
+    category: "ruedas",
   },
   {
     id: "4",
@@ -41,6 +41,6 @@ export let products = [
     imgURL:
       "https://res.cloudinary.com/dcykysgy9/image/upload/v1737069025/CarverSwallow2022C7__97455.1686072704_ffkubb.jpg",
     stock: 1,
-    category: "Ruedas",
+    category: "ruedas",
   },
 ];

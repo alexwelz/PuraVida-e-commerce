@@ -9,6 +9,7 @@ import { ItemDetails } from "./components/pages/itemDetails/ItemDetails";
 import { Cart } from "./components/pages/cart/Cart";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Checkout } from "./components/pages/checkout/Checkout";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -23,8 +24,10 @@ function App() {
         <Navbar changeMode={changeMode} isDark={isDark} />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:name" element={<ItemListContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/detail/:id" element={<ItemDetails />} />
+          <Route path="/detail/:checkout" element={<Checkout />} />
           <Route path="*" element={<h1>404 not found</h1>} />
         </Routes>
         <Footer />
