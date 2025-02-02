@@ -1,27 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { products } from "../../products";
-// import { useParams } from "react-router-dom";
-// import "./itemDetails.css";
-
-// export const ItemDetails = () => {
-//   const [item, setItem] = useState({});
-//   const { id } = useParams();
-
-//   useEffect(() => {
-//     let productSelected = products.find((product) => product.id === id);
-//     setItem(productSelected);
-//   }, [id]);
-//   return (
-//     <div className="product-container">
-//       <img className="imageUrl" src={item.imgURL}></img>
-//       <div className="detailText">
-//         <h2>{item.title}</h2>
-//         <h3>{item.price}</h3>
-//       </div>
-//     </div>
-//   );
-// };
-
 import { useEffect, useState } from "react";
 import { products } from "../../products";
 import { useParams } from "react-router-dom";

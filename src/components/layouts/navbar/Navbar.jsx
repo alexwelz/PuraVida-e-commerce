@@ -2,8 +2,9 @@ import "./navbar.css";
 import { CartWidget } from "../../common/cartWidget/CartWidget";
 import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { Dark } from "../../../components/common/changeMode/ChangeMode";
 
-export const Navbar = () => {
+export const Navbar = ({ changeMode, isDark }) => {
   return (
     <nav className="navbar-container">
       <Link to="/">
@@ -15,6 +16,7 @@ export const Navbar = () => {
         <li className="item">Novedades</li>
         <li className="item">Contacto</li>
       </ul>
+      <Dark changeMode={changeMode} isDark={isDark} />
       <CartWidget />
     </nav>
   );

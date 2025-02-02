@@ -10,3 +10,17 @@
 .product-card {
   margin-bottom: 40px;
 }
+
+.btnDetail {
+  background-color: #fa2f2f;
+  color: #fff;
+  padding: 2%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.detailCard p {
+  margin-top: 4%;
+}
