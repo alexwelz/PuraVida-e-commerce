@@ -17,8 +17,8 @@ export const Navbar = ({ changeMode, isDark }) => {
         <Link className="item" to="/category/tablas">
           Tablas
         </Link>
-        <Link className="item" to="/category/ejes">
-          Ejes
+        <Link className="item" to="/category/trucks">
+          Trucks
         </Link>
         <Link className="item" to="/category/ruedas">
           Ruedas
