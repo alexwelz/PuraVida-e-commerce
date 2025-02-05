@@ -1,3 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
   color: black;
+  border-top: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 140%;
+  cursor: pointer;
 }
