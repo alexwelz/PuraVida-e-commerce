@@ -5,7 +5,10 @@ import { MdDelete } from "react-icons/md";
 import "./cart.css";
 
 export const Cart = () => {
-  const { cart, removeCart, removeById } = useContext(CartContext);
+  const { cart, removeCart, removeById, getTotalAmount } =
+    useContext(CartContext);
+
+  let total = getTotalAmount();
 
   return (
     <div className="cart-container">
@@ -29,6 +32,9 @@ export const Cart = () => {
           </div>
         );
       })}
+      <h2 id="totalAmount">
+        Total a pagar: <span>$ {total}</span>
+      </h2>
       <div className="cart-actions">
         <Link to="/checkout" id="buy">
           Comprar

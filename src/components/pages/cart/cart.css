@@ -47,6 +47,23 @@
   max-width: 400px;
   margin: 20px auto;
 }
+#removeCart {
+  background-color: #fa2f2f;
+  color: white;
+}
+
+#removeCart:hover {
+  background-color: #820606;
+}
+
+#totalAmount {
+  white-space: nowrap;
+  margin-left: 33%;
+  margin-bottom: 10%;
+}
+#totalAmount span {
+  margin: 5%;
+}
 
 #removeCart,
 #buy {
@@ -59,15 +76,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
-}
-
-#removeCart {
-  background-color: #fa2f2f;
-  color: white;
-}
-
-#removeCart:hover {
-  background-color: #820606;
 }
 
 #buy {

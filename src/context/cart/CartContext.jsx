@@ -19,6 +19,15 @@ export const CartContextProvider = ({ children }) => {
     let newArray = cart.filter((element) => element.id !== id);
     setCart(newArray);
   };
-  let data = { cart, addToCart, removeCart, removeById };
+
+  const getTotalAmount = () => {
+    let totalAmount = 0;
+    for (let i = 0; i < cart.length; i++) {
+      totalAmount += cart[i].price * cart[i].quantity;
+    }
+    return totalAmount;
+  };
+
+  let data = { cart, addToCart, removeCart, removeById, getTotalAmount };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
