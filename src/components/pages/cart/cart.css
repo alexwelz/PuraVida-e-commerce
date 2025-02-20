@@ -35,3 +35,49 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.cart-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#removeCart,
+#buy {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#removeCart {
+  background-color: #fa2f2f;
+  color: white;
+}
+
+#removeCart:hover {
+  background-color: #820606;
+}
+
+#buy {
+  background-color: #36cb09;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#buy:hover {
+  background-color: darkgreen;
+}

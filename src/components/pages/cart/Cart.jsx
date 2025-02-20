@@ -4,7 +4,7 @@ import { CartContext } from "../../../context/cart/CartContext";
 import "./cart.css";
 
 export const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, removeCart } = useContext(CartContext);
 
   return (
     <div className="cart-container">
@@ -25,8 +25,14 @@ export const Cart = () => {
           </div>
         );
       })}
-
-      <Link to="/checkout">Finalizar compra</Link>
+      <div className="cart-actions">
+        <Link to="/checkout" id="buy">
+          Comprar
+        </Link>
+        <button onClick={removeCart} id="removeCart">
+          Vaciar carrito
+        </button>
+      </div>
     </div>
   );
 };
