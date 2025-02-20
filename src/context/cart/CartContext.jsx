@@ -33,6 +33,20 @@ export const CartContextProvider = ({ children }) => {
     return total;
   };
 
-  let data = { cart, addToCart, removeCart, removeById, getTotalAmount };
+  const getTotalItems = () => {
+    let totalItems = cart.reduce((acumulator, element) => {
+      return acumulator + element.quantity;
+    }, 0);
+    return totalItems;
+  };
+
+  let data = {
+    cart,
+    addToCart,
+    removeCart,
+    removeById,
+    getTotalAmount,
+    getTotalItems,
+  };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
