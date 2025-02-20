@@ -15,6 +15,10 @@ export const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
-  let data = { cart, addToCart, removeCart };
+  const removeById = (id) => {
+    let newArray = cart.filter((element) => element.id !== id);
+    setCart(newArray);
+  };
+  let data = { cart, addToCart, removeCart, removeById };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

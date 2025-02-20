@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/cart/CartContext";
+import { MdDelete } from "react-icons/md";
 import "./cart.css";
 
 export const Cart = () => {
-  const { cart, removeCart } = useContext(CartContext);
+  const { cart, removeCart, removeById } = useContext(CartContext);
 
   return (
     <div className="cart-container">
@@ -22,6 +23,9 @@ export const Cart = () => {
             <h2 className="cart-item-title">{product.title}</h2>
             <h2 className="cart-item-price">{"$ " + product.price}</h2>
             <h2>{product.quantity}</h2>
+            <button onClick={() => removeById(product.id)} id="removeItem">
+              <MdDelete />
+            </button>
           </div>
         );
       })}
