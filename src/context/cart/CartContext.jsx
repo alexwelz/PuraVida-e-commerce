@@ -21,11 +21,16 @@ export const CartContextProvider = ({ children }) => {
   };
 
   const getTotalAmount = () => {
-    let totalAmount = 0;
-    for (let i = 0; i < cart.length; i++) {
-      totalAmount += cart[i].price * cart[i].quantity;
-    }
-    return totalAmount;
+    // let totalAmount = 0;
+    // for (let i = 0; i < cart.length; i++) {
+    //   totalAmount += cart[i].price * cart[i].quantity;
+    // }
+    // return totalAmount;
+
+    let total = cart.reduce((totalAmount, element) => {
+      return totalAmount + element.price * element.quantity;
+    }, 0);
+    return total;
   };
 
   let data = { cart, addToCart, removeCart, removeById, getTotalAmount };
