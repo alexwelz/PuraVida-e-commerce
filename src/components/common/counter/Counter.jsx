@@ -1,15 +1,29 @@
+import { CartContext } from "../../../context/cart/CartContext";
 import "./counter.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
-export const Counter = () => {
+export const Counter = ({ item }) => {
   const [count, setCount] = useState(1);
-  console.log(count, setCount);
+  const { addToCart } = useContext(CartContext);
+  //console.log(count, setCount);
 
   const Add = () => {
-    setCount(count + 1);
+    if (count < item.stock) {
+      setCount(count + 1);
+      //console.log(item);
+    }
   };
   const Subtract = () => {
-    setCount(count - 1);
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
+  const AddToCart = () => {
+    //Guardo todas las propiedades del objeto y la cantidad del producto
+    let objectToCart = { ...item, quantity: count };
+    console.log(objectToCart);
+
+    addToCart(objectToCart);
   };
 
   return (
@@ -17,6 +31,7 @@ export const Counter = () => {
       <button onClick={Subtract}>Restar</button>
       <h2>Contador: {count}</h2>
       <button onClick={Add}>Sumar</button>
+      <button onClick={AddToCart}>Add to cart</button>
     </div>
   );
 };

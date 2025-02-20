@@ -2,7 +2,7 @@ import "./navbar.css";
 import { CartWidget } from "../../common/cartWidget/CartWidget";
 import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
-import { Dark } from "../../../components/common/changeMode/ChangeMode";
+import { Dark } from "../../../context/changeMode/ChangeModeContext";
 
 export const Navbar = ({ changeMode, isDark }) => {
   return (

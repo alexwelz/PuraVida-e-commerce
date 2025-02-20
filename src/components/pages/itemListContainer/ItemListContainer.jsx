@@ -1,6 +1,6 @@
 import "./itemListContainer.css";
 import { ProductCard } from "../../common/productCard/ProductCard";
-import { products } from "../../products";
+import { products } from "../../../products";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";

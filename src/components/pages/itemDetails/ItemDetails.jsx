@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { products } from "../../products";
+import { products } from "../../../products";
 import { useParams } from "react-router-dom";
+import { Counter } from "../../common/counter/Counter";
 import "./itemDetails.css";
 
 export const ItemDetails = () => {
@@ -20,6 +21,7 @@ export const ItemDetails = () => {
         <p className="product-description">{item.description}</p>
         <h3 className="product-price">${item.price}</h3>
       </div>
+      <Counter item={item} />
     </div>
   );
 };
