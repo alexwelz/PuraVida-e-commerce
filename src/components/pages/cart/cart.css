@@ -6,7 +6,7 @@
 
 .cart-header {
   display: grid;
-  grid-template-columns: 1fr 300px auto 100px;
+  grid-template-columns: 390px 150px 270px;
   font-weight: bold;
   padding: 10px 0;
   text-align: center;
@@ -14,11 +14,14 @@
 
 .cart-item {
   display: grid;
-  grid-template-columns: 1fr 300px auto 100px;
+  grid-template-columns: 1fr 300px 200px auto 65px;
   align-items: center;
   gap: 20px;
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
+}
+.cart-item-image {
+  width: 100%;
 }
 
 #title {
@@ -59,7 +62,7 @@
 #totalAmount {
   white-space: nowrap;
   margin-left: 33%;
-  margin-bottom: 10%;
+  margin: 5% 5% 0 35%;
 }
 #totalAmount span {
   margin: 5%;

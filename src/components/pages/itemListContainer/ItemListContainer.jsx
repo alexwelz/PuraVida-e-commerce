@@ -39,8 +39,7 @@ const ItemListContainer = () => {
   }, [name]);
 
   return (
-    <div>
-      <h2>Bienvenido a Pura Vida</h2>
+    <div className="cards">
       {items.map((element) => {
         return <ProductCard key={element.id} {...element} />;
         // return <ProductCard

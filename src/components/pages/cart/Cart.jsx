@@ -23,6 +23,11 @@ export const Cart = () => {
       {cart.map((product) => {
         return (
           <div key={product.id} className="cart-item">
+            <img
+              className="cart-item-image"
+              src={product.imgURL}
+              alt={product.title}
+            />
             <h2 className="cart-item-title">{product.title}</h2>
             <h2 className="cart-item-price">{"$ " + product.price}</h2>
             <h2>{product.quantity}</h2>

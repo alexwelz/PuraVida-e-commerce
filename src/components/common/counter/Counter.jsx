@@ -1,6 +1,8 @@
 import { CartContext } from "../../../context/cart/CartContext";
 import "./counter.css";
 import { useContext, useState } from "react";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { GrSubtractCircle } from "react-icons/gr";
 
 export const Counter = ({ item }) => {
   const [count, setCount] = useState(1);
@@ -27,11 +29,31 @@ export const Counter = ({ item }) => {
   };
 
   return (
-    <div>
-      <button onClick={Subtract}>Restar</button>
-      <h2>Contador: {count}</h2>
-      <button onClick={Add}>Sumar</button>
-      <button onClick={AddToCart}>Add to cart</button>
+    // <div className="actions">
+    //   <button onClick={Subtract} id="subtractItem">
+    //     <GrSubtractCircle />
+    //   </button>
+    //   <h2 className="count">{count}</h2>
+    //   <button onClick={Add} id="addItem">
+    //     <IoIosAddCircleOutline />
+    //   </button>
+    //   <button onClick={AddToCart} id="cart-button">
+    //     <FaCartPlus />
+    //   </button>
+    // </div>
+    <div className="counter-container">
+      <div className="counter-buttons">
+        <button onClick={Subtract} id="subtractItem">
+          <GrSubtractCircle />
+        </button>
+        <span className="count">{count}</span>
+        <button onClick={Add} id="addItem">
+          <IoIosAddCircleOutline />
+        </button>
+      </div>
+      <button onClick={AddToCart} id="addToCart" className="cart-button">
+        Agregar al carrito
+      </button>
     </div>
   );
 };

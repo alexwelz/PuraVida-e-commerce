@@ -20,8 +20,8 @@ export const ItemDetails = () => {
         <h2 className="product-title">{item.title}</h2>
         <p className="product-description">{item.description}</p>
         <h3 className="product-price">${item.price}</h3>
+        <Counter item={item} />
       </div>
-      <Counter item={item} />
     </div>
   );
 };
