@@ -6,9 +6,13 @@ export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    console.log(product);
-    //Mantengo todos los elementos del array y agrego el producto
-    setCart([...cart, product]);
+    let insideCart = cart.some((element) => element.id === product.id);
+    if (insideCart) {
+      alert("El producto se encuentra en el carrito");
+    } else {
+      //Mantengo todos los elementos del array y agrego el producto
+      setCart([...cart, product]);
+    }
   };
 
   const removeCart = () => {
