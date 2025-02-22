@@ -34,6 +34,16 @@ const ItemListContainer = () => {
       .catch((error) => console.log(error));
   }, [name]);
 
+  if (items.length === 0) {
+    return (
+      <div className="chargingInfo">
+        <div className="chargingModal">
+          <h1>Pura vida</h1>
+          <h2>Cargando productos, por favor espere...</h2>
+        </div>
+      </div>
+    );
+  }
   return (
     <>
       <div className="cards">
