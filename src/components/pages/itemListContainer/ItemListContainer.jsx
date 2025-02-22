@@ -34,31 +34,33 @@ const ItemListContainer = () => {
       .catch((error) => console.log(error));
   }, [name]);
 
-  if (items.length === 0) {
-    return (
-      <div className="chargingInfo">
-        <div className="chargingModal">
-          <h1>Pura vida</h1>
-          <h2>Cargando productos, por favor espere...</h2>
-        </div>
-      </div>
-    );
-  }
   return (
     <>
-      <div className="cards">
-        {items.map((element) => {
-          return <ProductCard key={element.id} {...element} />;
-          // return <ProductCard
-          //     key={element.id}
-          //     image={element.imgURL}
-          //     title={element.title}
-          //     price={element.price}
-          //     description={element.description}
-          //     id={element.id}
-          //   />
-        })}
-      </div>
+      {items.length === 0 ? (
+        <div className="chargingInfo">
+          <div className="chargingModal">
+            <h1>Pura vida</h1>
+            <h2>Cargando productos, por favor espere...</h2>
+          </div>
+        </div>
+      ) : (
+        <div className="cards">
+          {items.map((element) => {
+            return <ProductCard key={element.id} {...element} />;
+
+            // return (
+            //   <ProductCard
+            //     key={element.id}
+            //     image={element.imgURL}
+            //     title={element.title}
+            //     price={element.price}
+            //     description={element.description}
+            //     id={element.id}
+            //   />
+            // );
+          })}
+        </div>
+      )}
     </>
   );
 };
