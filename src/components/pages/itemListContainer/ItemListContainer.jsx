@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   //Simula una peticion que me devuelva los productos
@@ -14,7 +14,16 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     let productsCollection = collection(db, "products");
-    const getProducts = getDocs(productsCollection);
+    let consulation = productsCollection;
+    if (name) {
+      let partToCollection = query(
+        productsCollection,
+        where("category", "==", name)
+      );
+      consulation = partToCollection;
+    }
+
+    const getProducts = getDocs(consulation);
     getProducts
       .then((response) => {
         const array = response.docs.map((element) => {
