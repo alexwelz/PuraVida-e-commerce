@@ -1,9 +1,11 @@
 import "./itemListContainer.css";
 import { ProductCard } from "../../common/productCard/ProductCard";
-import { products } from "../../../products";
+// import { products } from "../../../products";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
   //Simula una peticion que me devuelva los productos
@@ -11,47 +13,34 @@ const ItemListContainer = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    let productsFiltered;
-    if (name) {
-      productsFiltered = products.filter(
-        (element) => element.category === name
-      );
-    }
-
-    const getProducts = new Promise((resolve, reject) => {
-      const isLogged = true;
-
-      if (isLogged) {
-        resolve(!name ? products : productsFiltered);
-      } else {
-        reject({ statusCode: 400, message: "Error, algo salio mal" });
-      }
-    });
-
+    let productsCollection = collection(db, "products");
+    const getProducts = getDocs(productsCollection);
     getProducts
       .then((response) => {
-        setItems(response);
+        const array = response.docs.map((element) => {
+          return { id: element.id, ...element.data() };
+        });
+        setItems(array);
       })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {});
+      .catch((error) => console.log(error));
   }, [name]);
 
   return (
-    <div className="cards">
-      {items.map((element) => {
-        return <ProductCard key={element.id} {...element} />;
-        // return <ProductCard
-        //     key={element.id}
-        //     image={element.imgURL}
-        //     title={element.title}
-        //     price={element.price}
-        //     description={element.description}
-        //     id={element.id}
-        //   />
-      })}
-    </div>
+    <>
+      <div className="cards">
+        {items.map((element) => {
+          return <ProductCard key={element.id} {...element} />;
+          // return <ProductCard
+          //     key={element.id}
+          //     image={element.imgURL}
+          //     title={element.title}
+          //     price={element.price}
+          //     description={element.description}
+          //     id={element.id}
+          //   />
+        })}
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 export let products = [
   {
-    id: "1",
+    // id: "1",
     title: "Carver C7 Raw 30,75' Thunder",
     price: 300125,
     description:
@@ -11,7 +11,7 @@ export let products = [
     category: "tablas",
   },
   {
-    id: "2",
+    //  id: "2",
     title: "Carver CX Raw 29,25' Bloom",
     price: 306250,
     description:
@@ -22,7 +22,7 @@ export let products = [
     category: "tablas",
   },
   {
-    id: "3",
+    // id: "3",
     title: "Tabla de surf completa Carver C5 32'' Omni",
     price: 243775,
     description:
@@ -33,7 +33,7 @@ export let products = [
     category: "tablas",
   },
   {
-    id: "4",
+    // id: "4",
     title: "Tabla de surf Carver Swallow 29,5' 2022 C7",
     price: 300125,
     description:
@@ -44,7 +44,7 @@ export let products = [
     category: "tablas",
   },
   {
-    id: "5",
+    // id: "5",
     title: "Carver C7 Surfskate Truck Set - Coal Satin",
     price: 151280,
     description:
@@ -55,7 +55,7 @@ export let products = [
     category: "trucks",
   },
   {
-    id: "6",
+    // id: "6",
     title: "Rueda Roundhouse by Carver ECO MAG de 65 mm y 81 A",
     price: 47580,
     description:
