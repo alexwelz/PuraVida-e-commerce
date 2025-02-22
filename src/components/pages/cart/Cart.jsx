@@ -40,14 +40,16 @@ export const Cart = () => {
       <h2 id="totalAmount">
         Total a pagar: <span>$ {total}</span>
       </h2>
-      <div className="cart-actions">
-        <Link to="/checkout" id="buy">
-          Comprar
-        </Link>
-        <button onClick={removeCart} id="removeCart">
-          Vaciar carrito
-        </button>
-      </div>
+      {cart.length > 0 && (
+        <div className="cart-actions">
+          <Link to="/checkout" id="buy">
+            Comprar
+          </Link>
+          <button onClick={removeCart} id="removeCart">
+            Vaciar carrito
+          </button>
+        </div>
+      )}
     </div>
   );
 };
