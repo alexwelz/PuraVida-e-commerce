@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/cart/CartContext";
 import { db } from "../../../firebaseConfig";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 
 export const Checkout = () => {
   const { cart, getTotalAmount } = useContext(CartContext);
@@ -23,10 +23,17 @@ export const Checkout = () => {
       items: cart,
       total: total,
     };
-
+    //Guardar orden en firestore
     let orderCollection = collection(db, "orders");
     const newOrder = addDoc(orderCollection, order);
     newOrder.then((res) => setOrderTicket(res.id));
+
+    let productsCollection = collection(db, "products");
+
+    order.items.forEach((element) => {
+      let refDoc = doc(productsCollection, element.id);
+      updateDoc(refDoc, { stock: element.stock - element.quantity });
+    });
   };
 
   const caprutreData = (event) => {
