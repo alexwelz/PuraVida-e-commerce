@@ -1,0 +1,48 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titleForm {
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
+.formGroup {
+  margin: 50px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.formInput:focus {
+  border-color: #363035;
+  outline: none;
+}
+
+#buyOrder {
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+  background-color: #fa2f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#buyOrder:hover {
+  background-color: #820606;
+}
