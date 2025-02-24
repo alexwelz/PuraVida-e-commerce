@@ -9,6 +9,7 @@ import { Cart } from "./components/pages/cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { Checkout } from "./components/pages/checkout/Checkout";
 import { CartContextProvider } from "./context/cart/CartContext";
+import "./app.css";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -28,7 +29,16 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/detail/:id" element={<ItemDetails />} />
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="*" element={<h1>404 not found</h1>} />
+            <Route
+              path="*"
+              element={
+                <div className="container">
+                  <div className="modal">
+                    <h1>404 not found</h1>
+                  </div>
+                </div>
+              }
+            />
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -1,0 +1,16 @@
+.container {
+  margin-top: 5%;
+}
+
+.modal {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  color: #333;
+  margin-left: 5px;
+}
