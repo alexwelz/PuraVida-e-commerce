@@ -47,7 +47,10 @@ export const Checkout = () => {
   return (
     <div>
       {orderTicket ? (
-        <h1 id="modalOrder">Tu comprobante de comra es: {orderTicket}</h1>
+        <div id="modalOrder">
+          <h1 id="titleOrder">Tu compra se ha realizado con éxito! 🙌 </h1>
+          <h2>Tu comprobante de compra es: {orderTicket}</h2>
+        </div>
       ) : (
         <div>
           <h2 className="titleForm">Formulario de compra</h2>

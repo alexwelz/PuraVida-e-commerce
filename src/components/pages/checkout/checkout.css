@@ -46,3 +46,16 @@
 #buyOrder:hover {
   background-color: #820606;
 }
+
+#modalOrder {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin-top: 15%;
+  text-align: center;
+}
+
+#titleOrder {
+  margin-bottom: 20px;
+}
