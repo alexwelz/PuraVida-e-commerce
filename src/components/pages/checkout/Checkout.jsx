@@ -15,7 +15,6 @@ export const Checkout = () => {
 
   const buy = (event) => {
     event.preventDefault();
-    console.log(userInfo);
 
     //Orden de compra desde firestore
     let total = getTotalAmount();
@@ -42,7 +41,7 @@ export const Checkout = () => {
 
   const caprutreData = (event) => {
     const { value, name } = event.target;
-    console.log(value, name);
+
     setUserInfo({ ...userInfo, [name]: value });
   };
   return (
