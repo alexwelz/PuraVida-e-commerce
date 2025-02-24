@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // import { products } from "../../../products";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { Counter } from "../../common/counter/Counter";
 import "./itemDetails.css";
 import { db } from "../../../firebaseConfig";

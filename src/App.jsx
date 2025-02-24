@@ -6,7 +6,7 @@ import "./context/changeMode/changeModeContext.css";
 //import ArgentineComponent from "./components/ArgentineComponent";
 import { ItemDetails } from "./components/pages/itemDetails/ItemDetails";
 import { Cart } from "./components/pages/cart/Cart";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import { Checkout } from "./components/pages/checkout/Checkout";
 import { CartContextProvider } from "./context/cart/CartContext";
 

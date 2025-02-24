@@ -1,7 +1,7 @@
 import "./footer.css";
 import { IoLogoGithub } from "react-icons/io5";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export const Footer = () => {
   return (
