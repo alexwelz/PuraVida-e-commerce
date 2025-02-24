@@ -59,3 +59,19 @@
 #titleOrder {
   margin-bottom: 20px;
 }
+
+#backButton {
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+  background-color: #fa2f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+#backButton:hover {
+  background-color: #820606;
+}

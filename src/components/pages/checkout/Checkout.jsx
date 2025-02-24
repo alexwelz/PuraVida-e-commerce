@@ -3,6 +3,7 @@ import "./checkout.css";
 import { CartContext } from "../../../context/cart/CartContext";
 import { db } from "../../../firebaseConfig";
 import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
+import { Link } from "react-router";
 
 export const Checkout = () => {
   const { cart, getTotalAmount, removeCart } = useContext(CartContext);
@@ -50,6 +51,10 @@ export const Checkout = () => {
         <div id="modalOrder">
           <h1 id="titleOrder">Tu compra se ha realizado con éxito! 🙌 </h1>
           <h2>Tu comprobante de compra es: {orderTicket}</h2>
+          <br />
+          <Link to="/" id="backButton">
+            Volver a inicio
+          </Link>
         </div>
       ) : (
         <div>

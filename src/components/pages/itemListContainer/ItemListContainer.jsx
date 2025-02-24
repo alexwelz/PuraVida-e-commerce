@@ -1,6 +1,6 @@
 import "./itemListContainer.css";
 import { ProductCard } from "../../common/productCard/ProductCard";
-// import { products } from "../../../products";
+//import { products } from "../../../products";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router";
@@ -22,7 +22,6 @@ const ItemListContainer = () => {
       );
       consulation = partToCollection;
     }
-
     const getProducts = getDocs(consulation);
     getProducts
       .then((response) => {
@@ -34,7 +33,16 @@ const ItemListContainer = () => {
       .catch((error) => console.log(error));
   }, [name]);
 
+  // const agregarPrdocutos = () => {
+  //   let productsCollection = collection(db, "products");
+  //   products.forEach((element) => {
+  //     addDoc(productsCollection, element);
+  //   });
+  // };
+
   return (
+    //<button onClick={agregarPrdocutos}>Agregar productos</button>;
+
     <>
       {items.length === 0 ? (
         <div className="chargingInfo">

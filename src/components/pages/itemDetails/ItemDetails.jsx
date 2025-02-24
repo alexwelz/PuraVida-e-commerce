@@ -25,6 +25,7 @@ export const ItemDetails = () => {
       <div className="product-details">
         <h2 className="product-title">{item.title}</h2>
         <p className="product-description">{item.description}</p>
+        <p className="product-stock">Stock: {item.stock}</p>
         <h3 className="product-price">${item.price}</h3>
         <Counter item={item} />
       </div>

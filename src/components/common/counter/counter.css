@@ -35,15 +35,15 @@
 }
 
 .cart-button {
+  margin: 10px;
   background-color: #fa2f2f;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
+  color: white;
   border: none;
-  border-radius: 25px;
-  text-align: center;
+  border-radius: 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  padding: 5px;
 }
 
 .cart-button:hover {
