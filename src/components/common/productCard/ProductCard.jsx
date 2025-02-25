@@ -15,7 +15,7 @@ export const ProductCard = ({
       <div className="detailCard">
         <h3>{title}</h3>
         {price && <p>Precio: ${price}</p>}
-        {<p>Stock: {stock}</p>}
+        <p>Stock: {stock < 0 ? 0 : stock}</p>
         <p>{description}</p>
         <Link to={`/detail/${id}`}>
           {<button className="btnDetail">Ver detalle</button>}

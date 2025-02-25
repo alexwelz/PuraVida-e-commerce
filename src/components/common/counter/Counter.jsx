@@ -19,7 +19,7 @@ export const Counter = ({ item }) => {
     }
   };
   const AddToCart = () => {
-    if (item.stock === 0) {
+    if (item.stock === 0 || item.stock < 0) {
       alert("No hay suficiente stock.");
     } else {
       // Guarda todas las propiedades del objeto y la cantidad del producto

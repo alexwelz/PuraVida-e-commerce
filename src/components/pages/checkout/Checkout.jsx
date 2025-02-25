@@ -67,20 +67,27 @@ export const Checkout = () => {
                 name="name"
                 onChange={caprutreData}
                 className="formInput"
+                required
+                pattern="[A-Za-z\s]+"
               />
+
               <input
                 type="text"
-                placeholder="Telefono"
+                placeholder="Teléfono"
                 name="phone"
                 onChange={caprutreData}
                 className="formInput"
+                maxLength="10"
+                pattern="^\d{10}$"
+                title="Por favor, ingresa un número válido de 10 dígitos."
               />
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 name="email"
                 onChange={caprutreData}
                 className="formInput"
+                required
               />
               <button id="buyOrder">Comprar</button>
             </form>
