@@ -53,7 +53,68 @@ Este proyecto consiste en el desarrollo del front-end de una Single Page Applica
 - Renderizado condicional para mostrar loaders y mensajes informativos, como "producto sin stock" o "carrito vacío".
 - Brindarle al usuario el id (o detalles adicionales) de la orden generada en Firestore.
 
-**👥 Contribuidores**
+## Instalación y Configuración
+
+- **Clonar el repositorio**:
+
+```
+git clone https://github.com/alexwelz/PuraVida-e-commerce.git
+```
+
+- Abrir el proyecto en Visual Studio Community.
+
+Luego, para ejecutar este proyecto en tu máquina local, sigue los pasos a continuación:
+
+### 1. Instalar Node.js
+
+Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema. Puedes descargarlo e instalarlo desde su sitio web oficial.
+
+### 2. Crear un nuevo proyecto con Vite
+
+Dirígete a la documentación de Vite en [vite.dev](https://vite.dev/guide/) y ejecuta el siguiente comando en la consola CMD:
+
+```
+npm create vite@latest
+```
+
+Cuando se te solicite, selecciona las siguientes opciones:
+
+- Framework: React
+- Framework: JavaScript
+
+### 3. Instalar dependencias
+
+Una vez creado el proyecto, navega al directorio del proyecto y ejecuta el siguiente comando dentro de la terminal de visual studio para las dependencias necesarias:
+
+```
+npm i
+```
+
+### 4. Instalar React Router
+
+Para gestionar la navegación en tu aplicación, instala React Router ejecutando el siguiente comando en la terminal:
+
+```
+npm install react-router
+```
+
+### 5. Instalar Firebase
+
+Para utilizar Firebase como base de datos, ejecuta el siguiente comando:
+
+```
+npm install firebase
+```
+
+### 6. Ejecutar el proyecto en localhost
+
+Para visualizar la aplicación en tu navegador, ejecuta el siguiente comando:
+
+```
+npm run dev
+```
+
+## Contribuidores
 
 - Nombre del estudiante: Alex Gustavo Welz
 - Curso: Coder House - React
